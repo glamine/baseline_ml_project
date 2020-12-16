@@ -14,16 +14,26 @@ melbourne_file_path = path + '/datasets/melb_house_prices.csv'
 # read the data and store data in DataFrame titled melbourne_data
 melbourne_data = pd.read_csv(melbourne_file_path) 
 
-# print a summary of the data in Melbourne data
+#%% print a summary of the data in Melbourne data
 print(melbourne_data.describe())
 print(melbourne_data.columns)
+
+print(melbourne_data.Suburb.value_counts())
+print(melbourne_data.Suburb.unique())
+print(melbourne_data.Suburb.mode()) # median, #mean
+
+print(melbourne_data.dtypes)
 
 #%%
 
 # dropna drops missing values (think of na as "not available")
 melbourne_data = melbourne_data.dropna(axis=0)
 
+
+
 #%%
+
+
 
 y = melbourne_data.Price
 
