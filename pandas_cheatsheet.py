@@ -34,6 +34,7 @@ print(ds2)
 df = pd.read_csv(melbourne_file_path)
 
 df.head()
+df.tail()
 df.shape
 #df.columnName
 print(df.columns)
