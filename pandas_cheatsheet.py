@@ -234,3 +234,13 @@ left = canadian_youtube.set_index(['title', 'trending_date'])
 right = british_youtube.set_index(['title', 'trending_date'])
 
 left.join(right, lsuffix='_CAN', rsuffix='_UK')
+
+#%% misc added
+
+# To keep things simple, we'll use only numerical predictors
+
+# drop columns
+melb_predictors = df.drop(['Price'], axis=1)
+
+# select and exclude columns by data type
+X = melb_predictors.select_dtypes(exclude=['object'])

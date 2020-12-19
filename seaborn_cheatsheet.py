@@ -89,3 +89,11 @@ sns.jointplot(x=df['Petal Length (cm)'], y=df['Sepal Width (cm)'], kind="kde")
 sns.kdeplot(data=df['Petal Length (cm)'], label="Iris-setosa", shade=True)
 sns.kdeplot(data=df['Petal Length (cm)'], label="Iris-versicolor", shade=True)
 sns.kdeplot(data=df['Petal Length (cm)'], label="Iris-virginica", shade=True)
+
+# Force legend to appear
+plt.legend()
+
+#%% set style
+
+# Change the style of the figure to the "dark" theme
+sns.set_style("dark") # (1)"darkgrid", (2)"whitegrid", (3)"dark", (4)"white", and (5)"ticks"
